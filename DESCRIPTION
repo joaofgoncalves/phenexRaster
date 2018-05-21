@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: João Gonçalves
 Maintainer: João Gonçalves <joaofgo@gmail.com>
 Description: A set of ancillary functions for running phenex R package
-License: GPL-3 | file LICENCE
+License: GPL-3 | LICENCE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.4.0)

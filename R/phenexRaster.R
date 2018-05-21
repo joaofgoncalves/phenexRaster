@@ -57,7 +57,13 @@ getModelledValuesToMatrix <- function(ndviObj){
 #' NDVI value is chosen depending on phase selected. For “greenup”, the lowest value before day of maximum NDVI
 #' value is used. For “senescence”, the lowest value after day of maximum NDVI value is used.
 #'
+#' @param ... Further arguments to be passed to \code{\link[phenex]{modelNDVI}}. These are parameters passed
+#' to smoothing or modelling functions. These are: ‘slidingperiod’ for correction “bise”, ‘window.ravg’ for
+#' correction “ravg”, ‘asym’ for method “Gauss”, ‘filter.threshold’ for method “FFT” and ‘degree’, ‘window.sav’
+#' and ‘smoothing’ for method “SavGol”.
+#'
 #' @inherit phenex::modelNDVI params
+#'
 #' @inherit phenex::phenoPhase params
 #'
 #' @return If \code{export = 'memory'}, then a list containing the following elements will be returned:
@@ -176,7 +182,7 @@ phenexRaster <- function(rst, index, years, jdays = seq(1,365,16),
                          method = method,
                          MARGIN = 1, # Apply functions over rows
                          silent = TRUE,
-                         doParallel = doParallel)
+                         doParallel = doParallel, ...)
 
 
     # Make a matrix object from the modelled VI data

@@ -125,12 +125,10 @@ value is used. For “senescence”, the lowest value after day of maximum NDVI 
 including VI modelled values and \code{phenoPhase} metrics by year in memory or, \code{'file'} which export
 everything to GeoTIFF files. The first option (\code{'memory'}) is not suited for large datasets.}
 
-\item{...}{Other parameters passed to correction or modelling function. 
-			These are: \sQuote{slidingperiod} for correction \dQuote{bise},
-					\sQuote{window.ravg} for correction \dQuote{ravg},
-					\sQuote{asym} for method \dQuote{Gauss},
-					\sQuote{filter.threshold} for method \dQuote{FFT} and
-					\sQuote{degree}, \sQuote{window.sav} and \sQuote{smoothing} for method \dQuote{SavGol}.}
+\item{...}{Further arguments to be passed to \code{\link[phenex]{modelNDVI}}. These are parameters passed
+to smoothing or modelling functions. These are: ‘slidingperiod’ for correction “bise”, ‘window.ravg’ for
+correction “ravg”, ‘asym’ for method “Gauss”, ‘filter.threshold’ for method “FFT” and ‘degree’, ‘window.sav’
+and ‘smoothing’ for method “SavGol”.}
 }
 \value{
 If \code{export = 'memory'}, then a list containing the following elements will be returned:
